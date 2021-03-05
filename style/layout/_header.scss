@@ -1,0 +1,47 @@
+.l-header {
+  position: fixed;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  height: $header-height;
+  width: 100%;
+  z-index: 300;
+  display: none;
+
+  @include bp-600up {
+    display: block;
+  }
+
+  &__container {
+    @include content-width;
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+
+    & > a {
+      height: $header-height;
+      line-height: $header-height;
+      padding: 0 20px;
+      color: $black;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1.1rem;
+    }
+
+    & > nav {
+      & > ul {
+        display: flex;
+        list-style: none;
+
+        & > li {
+          padding: 0 20px;
+
+          & > a {
+            color: $black;
+            text-decoration: none;
+          }
+        }
+      }
+    }
+  }
+}

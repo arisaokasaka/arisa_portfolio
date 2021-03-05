@@ -5,11 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ARISA Portfolio</title>
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="stylescheet.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
-    <!-- <script>
+    <script
+        src="https://use.fontawesome.com/releases/v5.15.2/js/all.js"
+        data-auto-a11y="true"
+    ></script>
+    <script>
         (function(d) {
           var config = {
             kitId: 'irg8vqo',
@@ -18,113 +18,322 @@
           },
           h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
         })(document);
-      </script> -->
+      </script>
+      
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="./node_modules/jquery.rateit/scripts/rateit.css">
+    <link rel="stylesheet" href="./style/app.css">
+    
 </head>
 <body>
-    <header class="l-header">
-        <p>ARISA</p>
-        <nav>
-            <ul>
-                <li><a href="">WORKS</a></li>
-                <li><a href="">SKILLS</a></li>
-                <li><a href="">ABOUT</a></li>
-                <li><a href="">VISION</a></li>
-                <li><a href="">CONTACT</a></li>
-            </ul>
-        </nav>
+    <header class="l-header" id="header">
+        <div class="l-header__container">
+            <a href="#header">ARISA</a>
+            <nav>
+                <ul>
+                    <li><a href="#works">WORKS</a></li>
+                    <li><a href="#skills">SKILLS</a></li>
+                    <li><a href="#about">ABOUT</a></li>
+                    <li><a href="#vision">VISION</a></li>
+                    <li><a href="#contact">CONTACT</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
-    <nav class="l-nav__mobile">
+    <div class="l-header-mobile">
         <p>ARISA</p>
-        <ul>
-            <li><a href="">WORKS</a></li>
-            <li><a href="">SKILLS</a></li>
-            <li><a href="">ABOUT</a></li>
-            <li><a href="">VISION</a></li>
-            <li><a href="">CONTACT</a></li>
-        </ul>
-        <a href="">Github</a>
-        <a href="">Twitter</a>
-        <a href="">BLOG</a>
-    </nav>
-    
-    <div class="p-hero">
-        <img src="" alt="">
-        <p>
-            はじめまして。岡坂有紗です。
-            <br/>創ることの楽しさ・喜びにハマるとともに、
-            <br/>創ったものを通して、人の役に立つことにやりがいを感じ、
-            <br/>エンジニアとなることを決意しました。
-        </p>
+        <button class="l-header-mobile__btn">MENU</button>
     </div>
+    <nav class="c-nav-mobile">
+        <ul>
+            <li><a href="#header">TOP</a></li>
+            <li><a href="#works">WORKS</a></li>
+            <li><a href="#skills">SKILLS</a></li>
+            <li><a href="#about">ABOUT</a></li>
+            <li><a href="#vision">VISION</a></li>
+            <li><a href="#contact">CONTACT</a></li>
+            <li>
+                <a href="https://github.com/arisaokasaka"><i class="fab fa-github"></i></a>
+                <a href="https://twitter.com/dev_design8"><i class="fab fa-twitter"></i></a>
+                <a href="https://de-milestones.com/"><i class="fas fa-blog"></i></a>
+            </li>
+            <li class="c-nav-mobile__btn--close"><i class="fas fa-times"></i></li>
+        </ul>
+    </nav>
 
-    <section class="p-works">
-        <h2>実績</h2>
-        <div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
+    <div class="p-hero">
+        <div class="p-hero__container">
+            <img src="/images/image_hero.png" alt="">
+            <p>
+                はじめまして。岡坂有紗です。
+                <br/>創ることの楽しさ・喜びにハマるとともに、
+                <br/>創ったものを通して、人の役に立つことにやりがいを感じ、
+                <br/>エンジニアとなることを決意しました。
+            </p>
+        </div>
+    </div>
+    <section class="p-works" id="works">
+        <h2>制作物</h2>
+        <div class="p-works__container">
+            <div class="p-works__container__item">
+                <div class="p-works__container__item__image">
+                    <img src="./images/bread-box.png" alt="">
+                </div>
+                <span>TypeScript&nbsp;/&nbsp;React&nbsp;/&nbsp;PHP&nbsp;<br/>/&nbsp;Laravel&nbsp;/&nbsp;レスポンシブ</span>
+                <div class="p-works__container__item__modal">
+                    <div class="p-works__container__item__modal__overlay"></div>
+                    <div class="p-works__container__item__modal__container">
+                        <button class="p-works__container__item__modal__container__btn--close"><i class="fas fa-times"></i></button>
+                        <h3>パンBOX - お気に入りのパン屋さんを見つける、つながる</h3>
+                        <div class="p-works__container__item__modal__container__explain">
+                            <label>URL</label>
+                            <span>公開URL：<a href="">https:xxxxx</a></span>
+                            <span>機能面解説と制作背景：<a href="">https:xxxxx</a></span>
+                            <label>コンセプト</label>
+                            <p>パン屋さんのまとめサイト。店舗側はメニューやお店の思いを公開したり、ユーザーはレビューやお気に入り登録ができるサイトです。</p>
+                            <label>制作期間</label>
+                            <p>約2か月</p>
+                            <label>担当</label>
+                            <p>全般（デザインから開発まで）</p>
+                            <label>使用言語・技術</label>
+                            <p>HTML / Sass / TypeScript / React / PHP / Laravel / postgreSQL / AWS</p>
+                            <label>ポイント</label>
+                            <p>SPAとなっています。また、使いやすいUI・UXを意識してデザイン・実装を行いました。レスポンシブにも対応しています。</p>
+                        </div>
+                        <div class="p-works__container__item__modal__container__image">
+                            <img src="./images/bread-box.png" alt="">
+                            <img src="./images/bread-box.png" alt="">
+                            <img src="./images/bread-box.png" alt="">
+                            <img src="./images/bread-box.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="p-works__container__item">
+                <div class="p-works__container__item__image">
+                    <img src="./images/portfolio.png" alt="">
+                </div>
+                <span>HTML&nbsp;/&nbsp;Sass&nbsp;/&nbsp;JavaScript&nbsp;/<br/>&nbsp;jQuery&nbsp;/&nbsp;レスポンシブ</span>
+                <div class="p-works__container__item__modal">
+                    <div class="p-works__container__item__modal__overlay"></div>
+                    <div class="p-works__container__item__modal__container">
+                        <button class="p-works__container__item__modal__container__btn--close"><i class="fas fa-times"></i></button>
+                        <h3>ARISA Portfolio</h3>
+                        <div class="p-works__container__item__modal__container__explain">
+                            <label>URL</label>
+                            <span>公開URL：<a href="">https:xxxxx</a></span>
+                            <label>コンセプト</label>
+                            <p>私、岡坂有紗のポートフォリオサイトです。</p>
+                            <label>制作期間</label>
+                            <p>約3日(その後修正あり)</p>
+                            <label>担当</label>
+                            <p>全般（デザインから開発まで）</p>
+                            <label>使用言語・技術</label>
+                            <p>HTML / Sass / jQuery</p>
+                            <label>ポイント</label>
+                            <p>就職活動で見て頂くために作成したので、自分自身の強みやビジョンも含めました。レスポンシブにも対応しています。</p>
+                        </div>
+                        <div class="p-works__container__item__modal__container__image">
+                            <img src="./images/portfolio.png" alt="">
+                            <img src="./images/bread-box.png" alt="">
+                            <img src="./images/bread-box.png" alt="">
+                            <img src="./images/bread-box.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="p-works__container__item">
+                <div class="p-works__container__item__image">
+                    <img src="./images/techWomen.png" alt="">
+                </div>
+                <span>共同開発&nbsp;/&nbsp;JavaScript&nbsp;/&nbsp;jQuery&nbsp;/<br/>&nbsp;Ruby on Rails&nbsp;/&nbsp;レスポンシブ</span>
+                <div class="p-works__container__item__modal">
+                    <div class="p-works__container__item__modal__overlay"></div>
+                    <div class="p-works__container__item__modal__container">
+                        <button class="p-works__container__item__modal__container__btn--close"><i class="fas fa-times"></i></button>
+                        <h3>Tech女子図鑑 - 女性のロールモデルが分かるサイト</h3>
+                        <div class="p-works__container__item__modal__container__explain">
+                            <label>URL</label>
+                            <span>公開URL：<a href="">https:xxxxx</a></span>
+                            <label>コンセプト</label>
+                            <p>どんな女性エンジニアがいるのか、どんなキャリアを歩んでいるのかが分かるサイトです。</p>
+                            <label>制作期間</label>
+                            <p>約1.5か月</p>
+                            <label>担当</label>
+                            <p>デザイン、フロントエンド</p>
+                            <label>使用言語・技術</label>
+                            <p>HTML / Sass / JavaScript / jQuery</p>
+                            <label>ポイント</label>
+                            <p>共同開発だったので、GitHubを利用しながらチーム開発の基本を学びました。</p>
+                        </div>
+                        <div class="p-works__container__item__modal__container__image">
+                            <img src="./images/techWomen.png" alt="">
+                            <img src="./images/bread-box.png" alt="">
+                            <img src="./images/bread-box.png" alt="">
+                            <img src="./images/bread-box.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="p-works__container__item">
+                <div class="p-works__container__item__image">
+                    <img src="./images/langSchool.png" alt="">
+                </div>
+                <span>HTML&nbsp;/&nbsp;CSS&nbsp;/&nbsp;JavaScript&nbsp;/&nbsp;React</span>
+                <div class="p-works__container__item__modal">
+                    <div class="p-works__container__item__modal__overlay"></div>
+                    <div class="p-works__container__item__modal__container">
+                        <button class="p-works__container__item__modal__container__btn--close"><i class="fas fa-times"></i></button>
+                        <h3>語学スクール　MPS</h3>
+                        <div class="p-works__container__item__modal__container__explain">
+                            <label>URL</label>
+                            <span>公開URL：<a href="">https:xxxxx</a></span>
+                            <label>コンセプト</label>
+                            <p>どんな女性エンジニアがいるのか、どんなキャリアを歩んでいるのかが分かるサイトです。</p>
+                            <label>制作期間</label>
+                            <p>約1.5か月</p>
+                            <label>担当</label>
+                            <p>デザイン、フロントエンド</p>
+                            <label>使用言語・技術</label>
+                            <p>HTML / CSS / JavaScript</p>
+                            <label>ポイント</label>
+                            <p></p>
+                        </div>
+                        <div class="p-works__container__item__modal__container__image">
+                            <img src="./images/langSchool.png" alt="">
+                            <img src="./images/bread-box.png" alt="">
+                            <img src="./images/bread-box.png" alt="">
+                            <img src="./images/bread-box.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="p-works__container__item">
+                <div class="p-works__container__item__image">
+                    <img src="./images/toDoList.png" alt="">
+                </div>
+                <span>HTML&nbsp;/&nbsp;CSS&nbsp;/&nbsp;JavaScript</span>
+                <div class="p-works__container__item__modal">
+                    <div class="p-works__container__item__modal__overlay"></div>
+                    <div class="p-works__container__item__modal__container">
+                        <button class="p-works__container__item__modal__container__btn--close"><i class="fas fa-times"></i></button>
+                        <h3>ToDo List</h3>
+                        <div class="p-works__container__item__modal__container__explain">
+                            <label>URL</label>
+                            <span>公開URL：<a href="">https:xxxxx</a></span>
+                            <label>コンセプト</label>
+                            <p>どんな女性エンジニアがいるのか、どんなキャリアを歩んでいるのかが分かるサイトです。</p>
+                            <label>制作期間</label>
+                            <p>約1.5か月</p>
+                            <label>担当</label>
+                            <p>デザイン、フロントエンド</p>
+                            <label>使用言語・技術</label>
+                            <p>HTML / CSS / JavaScript</p>
+                            <label>ポイント</label>
+                            <p></p>
+                        </div>
+                        <div class="p-works__container__item__modal__container__image">
+                            <img src="./images/toDoList.png" alt="">
+                            <img src="./images/bread-box.png" alt="">
+                            <img src="./images/bread-box.png" alt="">
+                            <img src="./images/bread-box.png" alt="">
+                        </div>
+                    </div>
+                </div>
+                <span>HTML&nbsp;/&nbsp;CSS&nbsp;/&nbsp;JavaScript</span>
+            </div>
         </div>
     </section>
 
-    <section class="p-skills">
+    <section class="p-skills" id="skills">
         <h2>スキル</h2>
-        <ul>
-            <li><i class="devicon-html5-plain colored"></i>HTML</li>
-            <li><i class="devicon-css3-plain colored"></i>CSS</li>
-            <li><i class="devicon-sass-original colored"></i>Sass</li>
-            <li><i class="devicon-javascript-plain colored"></i>JavaScript</li>
-            <li><i class="devicon-jquery-plain colored"></i>jQuery</li>
-            <li><i class="devicon-typescript-plain colored"></i>TypeScript</li>
-            <li><i class="devicon-react-original colored"></i>React</li>
-            <li><i class="devicon-php-plain colored"></i>PHP</li>
-            <li><i class="devicon-laravel-plain colored"></i>Laravel</li>
-            <li><i class="devicon-postgresql-plain colored"></i>postgreSQL</li>
-            <li><i class="devicon-git-plain colored"></i>Git/Github</li>
-        </ul>
-        <ul>
-            <li><i class="devicon-illustrator-plain colored"></i>Illustrator</li>
-            <li><i class="devicon-photoshop-plain colored"></i>Photoshop</li>
-            <li><i class="devicon-xd-plain colored"></i>XD</li>
-        </ul>
-        <ul>
-            <li><i class="devicon-google-plain colored"></i>Google Apps Script</li>
-            <li><img src="https://img.icons8.com/fluent/48/000000/microsoft-word-2019.png"/>Word</li>
-            <li><img src="https://img.icons8.com/color/48/000000/microsoft-excel-2019--v1.png"/>Execel</li>
-            <li><img src="https://img.icons8.com/color/48/000000/microsoft-powerpoint-2019.png"/>PowerPoint</li>
-        </ul>
+        <div class="p-skills__list">
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <ul>
+                            <li><i class="devicon-html5-plain colored"></i>HTML<div class="rateit" data-rateit-value="4" data-rateit-ispreset="true" data-rateit-readonly="true"></div></li>
+                            <li><i class="devicon-css3-plain colored"></i>CSS<div class="rateit" data-rateit-value="4" data-rateit-ispreset="true" data-rateit-readonly="true"></div></li>
+                            <li><i class="devicon-sass-original colored"></i>Sass<div class="rateit" data-rateit-value="4" data-rateit-ispreset="true" data-rateit-readonly="true"></div></li>
+                        </ul>
+                    </div>
+                    <div class="swiper-slide">
+                        <ul>
+                            <li><i class="devicon-javascript-plain colored"></i>JavaScript<div class="rateit" data-rateit-value="3.5" data-rateit-ispreset="true" data-rateit-readonly="true"></div></li>
+                            <li><i class="devicon-typescript-plain colored"></i>TypeScript<div class="rateit" data-rateit-value="3.5" data-rateit-ispreset="true" data-rateit-readonly="true"></div></li>
+                            <li><i class="devicon-react-original colored"></i>React<div class="rateit" data-rateit-value="3.5" data-rateit-ispreset="true" data-rateit-readonly="true"></div></li>
+                            <li><i class="devicon-jquery-plain colored"></i>jQuery<div class="rateit" data-rateit-value="3" data-rateit-ispreset="true" data-rateit-readonly="true"></div></li>
+                        </ul>
+                    </div>
+                    <div class="swiper-slide">
+                        <ul>
+                            <li><i class="devicon-php-plain colored"></i>PHP<div class="rateit" data-rateit-value="2.5" data-rateit-ispreset="true" data-rateit-readonly="true"></div></li>
+                            <li><i class="devicon-laravel-plain colored"></i>Laravel<div class="rateit" data-rateit-value="2.5" data-rateit-ispreset="true" data-rateit-readonly="true"></div></li>
+                            <li><i class="devicon-postgresql-plain colored"></i>postgreSQL<div class="rateit" data-rateit-value="2.5" data-rateit-ispreset="true" data-rateit-readonly="true"></div></li>
+                            <li><i class="devicon-git-plain colored"></i>Git/Github<div class="rateit" data-rateit-value="3" data-rateit-ispreset="true" data-rateit-readonly="true"></div></li>
+                        </ul>
+                    </div>
+                    <div class="swiper-slide">
+                        <ul>
+                            <li><i class="devicon-illustrator-plain colored"></i>Illustrator<div class="rateit" data-rateit-value="3" data-rateit-ispreset="true" data-rateit-readonly="true"></div></li>
+                            <li><i class="devicon-photoshop-plain colored"></i>Photoshop<div class="rateit" data-rateit-value="3" data-rateit-ispreset="true" data-rateit-readonly="true"></div></li>
+                            <li><i class="devicon-xd-plain colored"></i>XD<div class="rateit" data-rateit-value="3" data-rateit-ispreset="true" data-rateit-readonly="true"></div></li>
+                        </ul>
+                    </div>
+                    <div class="swiper-slide">
+                        <ul>
+                            <li><i class="devicon-google-plain colored"></i>Google Apps Script<div class="rateit" data-rateit-value="3" data-rateit-ispreset="true" data-rateit-readonly="true"></div></li>
+                            <li><img src="https://img.icons8.com/fluent/48/000000/microsoft-word-2019.png"/>Word<div class="rateit" data-rateit-value="4" data-rateit-ispreset="true" data-rateit-readonly="true"></div></li>
+                            <li><img src="https://img.icons8.com/color/48/000000/microsoft-excel-2019--v1.png"/>Execel<div class="rateit" data-rateit-value="4" data-rateit-ispreset="true" data-rateit-readonly="true"></div></li>
+                            <li><img src="https://img.icons8.com/color/48/000000/microsoft-powerpoint-2019.png"/>PowerPoint<div class="rateit" data-rateit-value="4" data-rateit-ispreset="true" data-rateit-readonly="true"></div></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="swiper-pagination swiper-pagination-black"></div>
+            </div>
+        </div>
     </section>
 
-    <section class="p-about">
+    <section class="p-about" id="about">
         <h2>私について</h2>
         <p>
             独学でフロントエンドを中心に学習しています。
             <br/>2020年7月より趣味の一環としてWEBやプログラミングを学び始め、
             <br/>エンジニアになる決意をした12月頃より、本格的に学習に取り組んでいます。
         </p>
-        <h4>私の強み</h4>
-        <ul>
-            <li>相手の立場に立って物事を考える
-                <p>
-                    前職の営業においても、一人一人のお客様の状況や価値観、気持ちを汲み取り、相手が求めていることを掴みながら対応していました。どのような状況でも、ご本人が納得感を持って決断できるようにサポートし、「岡坂さんが担当でよかった」と感謝されることも多くありました。
-                    <br/>営業で培った、顧客に寄り添うことを大切にしながら、開発を行います。
-                </p>
-            </li>
-            <li>知的好奇心
-                <p>
-                    営業職であったにも関わらず、技術に対する関心も強く、GASやエクセルの関数、自動化ツールなど自ら学び、業務効率化に貢献したり、同僚からの関数や効率化の相談に乗ることも多々ありました。
-                    <br/>エンジニアとしても、様々な案件に自ら手をあげ、技術を身に着け、チームに学んだことを還元できるような存在になります。
-                </p>
-            </li>
-            <li>周りの状況を正確に捉え、<br/>チームや相手に必要なことを率先して行う
-                <p></p>
-            </li>
-        </ul>
-        <p></p>
+        <div class="p-about__advantage">
+            <h4>\ 強みを3つピックアップ /</h4>
+            <ul class="p-about__advantage__list">
+                <li class="p-about__advantage__list__item">相手の立場に立って物事を考える<i class="fas fa-chevron-right"></i>
+                    <div class="p-about__advantage__list__item__detail">
+                        <p>
+                            前職の営業においても、一人一人のお客様の状況や価値観、気持ちを汲み取り、相手が求めていることを掴みながら対応していました。どのような状況でも、ご本人が納得感を持って決断できるようにサポートし、「岡坂さんが担当でよかった」と感謝されることも多くありました。
+                            <br/>営業で培った、顧客に寄り添うことを大切にしながら、開発を行います。
+                        </p>
+                    </div>
+                </li>
+                <li class="p-about__advantage__list__item">知的好奇心<i class="fas fa-chevron-right"></i>
+                    <div class="p-about__advantage__list__item__detail">
+                        <p>
+                            営業職であったにも関わらず、技術に対する関心も強く、GASやエクセルの関数、自動化ツールなど自ら学び、業務効率化に貢献したり、同僚からの関数や効率化の相談に乗ることも多々ありました。
+                            <br/>エンジニアとしても、様々な案件に自ら手をあげ、技術を身に着け、チームに学んだことを還元できるような存在になります。
+                        </p>
+                    </div>
+                </li>
+                <li class="p-about__advantage__list__item">周りの状況を正確に捉え、<br/>チームや相手に必要なことを率先して行う<i class="fas fa-chevron-right"></i>
+                    <div class="p-about__advantage__list__item__detail">
+                        <p></p>
+                    </div>
+                </li>
+            </ul>
+        </div>
     </section>
 
-    <section class="p-vision">
+    <section class="p-vision" id="vision">
         <h2>ビジョン</h2>
         <p>以下3点を大切にしたエンジニアになることを志しています。</p>
         <ul>
@@ -135,20 +344,23 @@
     </section>
     
     <aside class="l-side">
-        <a href="">Github</a>
-        <a href="">Twitter</a>
-        <a href="">BLOG</a>
+        <a href="https://github.com/arisaokasaka">Github</a>
+        <a href="https://twitter.com/dev_design8">Twitter</a>
+        <a href="https://de-milestones.com/">BLOG</a>
     </aside>
 
     <footer class="l-footer">
         <p>
             まだまだ未熟な私ですが、今後とも精一杯頑張って参ります。
-            <br/>どうぞよろしくお願いいたします。
+            <br/>何かございましたら、メールにてご連絡ください。
             <br/>
-            <br/>何かございましたら、下記メールアドレスまでお問合せください。
-            <br/>arisa.okasaka@gmail.com
+            <br/><a href="mailto:arisa.okasaka@gmail.com"><i class="far fa-envelope"></i></a>
         </p>
-        <span>icons from https://icons8.jp/</span>
+        <span>icons from <a href="https://icons8.jp/">https://icons8.jp/</a></span>
     </footer>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="./node_modules/jquery.rateit/scripts/jquery.rateit.js"></script>
+    <script src="./scripts/main.js"></script>
 </body>
 </html>

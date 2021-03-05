@@ -1,0 +1,35 @@
+.p-vision {
+  @include content-width;
+  padding-top: $section-top;
+
+  & > h2 {
+    position: relative;
+    text-align: center;
+    margin-bottom: $margin_between_title-content;
+
+    &::after {
+      @include sectionTitle_pseudoElement("VISION", 0, -50%);
+    }
+  }
+
+  & > p {
+    text-align: center;
+  }
+
+  & > ul {
+    margin: 0 auto;
+    width: fit-content;
+    list-style: none;
+
+    & > li {
+      font-weight: 600;
+      margin-top: 20px;
+
+      & > span {
+        font-weight: 600;
+        margin-right: 15px;
+        font-size: 1.3rem;
+      }
+    }
+  }
+}

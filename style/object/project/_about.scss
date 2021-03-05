@@ -1,0 +1,85 @@
+.p-about {
+  @include content-width;
+  padding-top: $section-top;
+
+  & > h2 {
+    position: relative;
+    text-align: center;
+    margin-bottom: $margin_between_title-content;
+
+    &::after {
+      @include sectionTitle_pseudoElement("ABOUT", -100%, -50%);
+    }
+  }
+
+  & > p {
+    text-align: center;
+  }
+
+  &__advantage {
+    margin-top: 40px;
+
+    & > h4 {
+      text-align: center;
+      font-size: 1.1rem;
+    }
+
+    &__list {
+      list-style: none;
+      margin: 0 auto;
+      width: 340px;
+
+      &__item {
+        letter-spacing: 1px;
+        font-weight: 600;
+        margin-top: 20px;
+        cursor: pointer;
+
+        & > svg {
+          margin-left: 8px;
+          font-size: 0.8rem;
+          color: #70818c;
+          animation: 1.3s linear 1.3s infinite move-right-left;
+        }
+
+        &__detail {
+          overflow: hidden;
+
+          & > p {
+            height: 0;
+            transform: translateY(-100%);
+            margin-top: 10px;
+            font-size: 0.8rem;
+            font-weight: 400;
+            transition: all 0.4s ease-in;
+          }
+        }
+      }
+    }
+  }
+}
+
+.p-about__advantage__list__item.active {
+  svg {
+    transform: rotate(90deg);
+    animation: none;
+  }
+
+  .p-about__advantage__list__item__detail {
+    p {
+      height: auto;
+      transform: translateY(0);
+    }
+  }
+}
+
+@keyframes move-right-left {
+  0%,
+  100% {
+    transform: translateX(0%);
+  }
+
+  40% {
+    transform: translateX(5px);
+  }
+}

@@ -1,0 +1,45 @@
+.l-footer {
+  background-color: $lightGray;
+  margin-top: $section-top;
+  padding-top: $section-top;
+
+  & > p {
+    text-align: center;
+    padding-bottom: $section-top;
+    font-size: 0.9rem;
+
+    & > a {
+      position: relative;
+      display: inline-block;
+      width: 2rem;
+      height: 2rem;
+      color: $white;
+      background-color: $black;
+      border-radius: 50%;
+
+      & > svg {
+        display: inline-block;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+
+      &:hover {
+        background-color: $darkGray;
+      }
+    }
+  }
+
+  & > span {
+    @include content-width;
+    display: block;
+    font-size: 0.7rem;
+    margin-bottom: 5px;
+    text-align: end;
+
+    & > a {
+      color: $black;
+    }
+  }
+}

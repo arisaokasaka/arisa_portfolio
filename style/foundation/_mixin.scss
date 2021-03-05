@@ -1,0 +1,53 @@
+// breakpoints
+@mixin bp-480up {
+  @media screen and (min-width: 480px) {
+    @content;
+  }
+}
+
+@mixin bp-600up {
+  @media screen and (min-width: 600px) {
+    @content;
+  }
+}
+
+@mixin bp-960up {
+  @media screen and (min-width: 960px) {
+    @content;
+  }
+}
+
+@mixin bp-1280up {
+  @media screen and (min-width: 1280px) {
+    @content;
+  }
+}
+
+@mixin bp-2x {
+  @media (min-resolution: 192dpi), (-webkit-min-device-pixel-ratio: 2) {
+    @content;
+  }
+}
+
+@mixin content-width {
+  width: 90%;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+@mixin sectionTitle_pseudoElement($text, $translateX, $translateY) {
+  content: $text;
+  display: inline-block;
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate($translateX, $translateY);
+  color: $lightGray;
+  font-size: 3rem;
+  font-weight: 600;
+  z-index: -100;
+
+  @include bp-600up {
+    font-size: 10rem;
+  }
+}

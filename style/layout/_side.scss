@@ -1,0 +1,13 @@
+.l-side {
+  position: fixed;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%) rotate(90deg);
+
+  & > a {
+    color: $black;
+    text-decoration: none;
+    margin-right: 20px;
+    font-size: 0.8rem;
+  }
+}

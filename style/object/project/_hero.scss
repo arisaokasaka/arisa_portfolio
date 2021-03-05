@@ -1,0 +1,33 @@
+.p-hero {
+  height: 500px;
+  width: 100%;
+  background-color: $lightGray;
+  z-index: -100;
+  overflow: hidden;
+
+  &__container {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    @include content-width;
+
+    & > img {
+      position: absolute;
+      top: 21%;
+      left: 0%;
+      height: 450px;
+    }
+
+    & > p {
+      position: absolute;
+      top: 30%;
+      left: 30%;
+      width: fit-content;
+      line-height: 2.3rem;
+      font-weight: 600;
+      font-size: 1.2rem;
+      letter-spacing: 2px;
+      font-family: a-otf-midashi-go-mb31-pr6n, sans-serif;
+    }
+  }
+}
