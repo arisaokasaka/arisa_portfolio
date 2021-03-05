@@ -13,21 +13,59 @@
 
     & > img {
       position: absolute;
-      top: 21%;
-      left: 0%;
+      top: 15%;
+      left: -34%;
       height: 450px;
+
+      @include bp-480up {
+        top: 15%;
+        left: -15%;
+      }
+
+      @include bp-600up {
+        top: 21%;
+        left: -5%;
+      }
+
+      @include bp-600up {
+        top: 20%;
+        left: 0;
+      }
     }
 
     & > p {
       position: absolute;
-      top: 30%;
+      top: 37%;
       left: 30%;
-      width: fit-content;
-      line-height: 2.3rem;
+      width: 70%;
+      line-height: 1.8rem;
       font-weight: 600;
-      font-size: 1.2rem;
-      letter-spacing: 2px;
+      font-size: 1rem;
       font-family: a-otf-midashi-go-mb31-pr6n, sans-serif;
+
+      @include bp-480up {
+        top: 37%;
+        left: 33%;
+        width: 60%;
+      }
+
+      @include bp-600up {
+        top: 37%;
+        left: 33%;
+        width: 70%;
+        font-size: 1.2rem;
+        line-height: 2.3rem;
+        letter-spacing: 2px;
+      }
+
+      @include bp-960up {
+        top: 37%;
+        left: 30%;
+        width: fit-content;
+        font-size: 1.2rem;
+        line-height: 2.3rem;
+        letter-spacing: 2px;
+      }
     }
   }
 }

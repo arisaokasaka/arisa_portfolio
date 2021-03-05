@@ -13,7 +13,7 @@
   }
 
   &__container {
-    @include content-width;
+    max-width: 1260px;
     display: flex;
     align-items: center;
     margin: 0 auto;

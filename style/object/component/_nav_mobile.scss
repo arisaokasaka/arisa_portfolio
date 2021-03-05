@@ -18,19 +18,22 @@
     list-style: none;
 
     & > li {
-      margin-bottom: 40px;
+      margin-bottom: 20px;
       text-align: center;
       position: relative;
 
       & > a {
+        display: inline-block;
         color: $black;
+        font-weight: 550;
         text-decoration: none;
+        padding: 10px 0;
       }
 
       &::after {
         position: absolute;
         left: 50%;
-        bottom: -1rem;
+        bottom: -4px;
         transform: translateX(-50%);
         font-size: 0.5rem;
         width: 4rem;
@@ -62,17 +65,11 @@
 
       &:nth-child(5) {
         &::after {
-          content: "ビジョン";
-        }
-      }
-
-      &:nth-child(6) {
-        &::after {
           content: "お問合せ";
         }
       }
 
-      &:nth-child(7) {
+      &:nth-child(6) {
         & > a {
           font-size: 1.2rem;
           margin: 0 5px;

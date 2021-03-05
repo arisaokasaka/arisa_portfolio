@@ -1,0 +1,7 @@
+.u-mobile_none {
+  display: none !important;
+
+  @include bp-600up {
+    display: block;
+  }
+}

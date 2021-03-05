@@ -39,12 +39,16 @@ $(".c-nav-mobile").on('click',function() {
 const swiper = new Swiper('.swiper-container', {
     loop: true,
     grabCursor: true,
-    slidesPerView: 1.5,
+    slidesPerView: 1,
     spaceBetween: 20,
     speed: 1000,
     centeredSlides: true,
 
     breakpoints: {
+        480: {
+            
+            slidesPerView: 1.5,
+        },
         600: {
             slidesPerView: 2.5,
         },

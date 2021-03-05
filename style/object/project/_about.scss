@@ -1,6 +1,7 @@
 .p-about {
   @include content-width;
   padding-top: $section-top;
+  margin-bottom: $section-bottom;
 
   & > h2 {
     position: relative;
@@ -17,19 +18,61 @@
   }
 
   &__advantage {
-    margin-top: 40px;
+    display: grid;
+    margin-top: 60px;
 
-    & > h4 {
+    @include bp-960up {
+      grid-template-columns: 300px 1fr;
+    }
+
+    &__title {
+      position: relative;
+      line-height: 300px;
+      width: 300px;
       text-align: center;
-      font-size: 1.1rem;
+      font-size: 1.5rem;
+      font-weight: 550;
+      color: $softBlack;
+      letter-spacing: 2px;
+      margin: 0 auto;
+
+      &::before {
+        content: "";
+        display: block;
+        position: absolute;
+        background-image: url(../../../images/advantage_circle.png);
+        background-size: contain;
+        background-repeat: none;
+        width: 300px;
+        height: 300px;
+        animation: 35s linear infinite rotate_normal;
+      }
     }
 
     &__list {
+      position: relative;
       list-style: none;
       margin: 0 auto;
-      width: 340px;
+      margin-top: 30px;
+      max-width: 500px;
+
+      @include bp-480up {
+        width: 80%;
+      }
+
+      @include bp-600up {
+        width: 60%;
+      }
+
+      @include bp-960up {
+        width: fit-content;
+        margin: 0;
+        margin-top: 54px;
+        padding-left: 80px;
+      }
 
       &__item {
+        font-size: 1.1rem;
         letter-spacing: 1px;
         font-weight: 600;
         margin-top: 20px;
@@ -37,13 +80,14 @@
 
         & > svg {
           margin-left: 8px;
-          font-size: 0.8rem;
+          font-size: 0.9rem;
           color: #70818c;
           animation: 1.3s linear 1.3s infinite move-right-left;
         }
 
         &__detail {
           overflow: hidden;
+          margin-bottom: 10px;
 
           & > p {
             height: 0;
@@ -51,8 +95,74 @@
             margin-top: 10px;
             font-size: 0.8rem;
             font-weight: 400;
-            transition: all 0.4s ease-in;
+            transition: all 0.4s ease-in-out;
+            border-left: 1px solid $gray;
+            padding-left: 10px;
+            margin-left: 1px;
           }
+        }
+      }
+    }
+  }
+
+  &__vision {
+    margin-top: 60px;
+    display: grid;
+    @include bp-960up {
+      grid-template-columns: 300px 1fr;
+    }
+
+    &__title {
+      position: relative;
+      line-height: 220px;
+      width: 220px;
+      text-align: center;
+      font-size: 1.5rem;
+      font-weight: 550;
+      color: $softBlack;
+      letter-spacing: 2px;
+      margin: 0 auto;
+
+      &::before {
+        content: "";
+        display: block;
+        position: absolute;
+        background-image: url(../../../images/vision_circle.png);
+        background-size: contain;
+        background-repeat: none;
+        width: 220px;
+        height: 220px;
+        animation: 35s linear infinite rotate_normal;
+      }
+    }
+
+    &__list {
+      position: relative;
+      list-style: none;
+      width: 340px;
+      margin: 0 auto;
+      margin-top: 30px;
+      width: fit-content;
+      list-style: none;
+
+      @include bp-960up {
+        padding-left: 80px;
+        margin: 0;
+        margin-top: 30px;
+      }
+
+      & > li {
+        display: flex;
+        align-items: center;
+        font-size: 1.1rem;
+        font-weight: 600;
+        margin-top: 20px;
+
+        & > span {
+          font-weight: 600;
+          margin-right: 15px;
+          font-size: 1.5rem;
+          color: $gray;
         }
       }
     }
@@ -81,5 +191,15 @@
 
   40% {
     transform: translateX(5px);
+  }
+}
+
+@keyframes rotate_normal {
+  0% {
+    transform: rotate(0);
+  }
+
+  100% {
+    transform: rotate(360deg);
   }
 }

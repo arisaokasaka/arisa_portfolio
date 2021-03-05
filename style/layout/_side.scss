@@ -1,13 +1,24 @@
 .l-side {
   position: fixed;
   top: 50%;
-  right: 10px;
+  right: -15px;
   transform: translateY(-50%) rotate(90deg);
+  display: none;
+
+  @include bp-600up {
+    display: block;
+  }
 
   & > a {
     color: $black;
     text-decoration: none;
-    margin-right: 20px;
+    margin-right: 2rem;
     font-size: 0.8rem;
+
+    & > svg {
+      color: $black;
+      font-size: 1rem;
+      margin-right: 0.3rem;
+    }
   }
 }
