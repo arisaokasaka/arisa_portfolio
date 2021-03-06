@@ -35,25 +35,69 @@ $(".c-nav-mobile").on('click',function() {
     $(this).removeClass("active");
 });
 
+// スクロールに合わせてサイドバー表示
+$(function() {   
+    let side = $('.l-side');
+	if (window.matchMedia('(min-width: 960px)').matches) {
+        $(side).hide();
+        $(window).on('scroll', function () {
+            if ($(this).scrollTop() > 100) {
+                side.slideDown();
+            } else {
+                side.hide();
+            }
+        });
+    }else{
+        $(side).hide();
+    }
+})
 
+// スクロールに合わせてヘッダー背景を表示
+$(function() {
+    let header = $('.l-header');
+    $(window).on('scroll', function () {
+        if ($(this).scrollTop() > 100) {
+            header.addClass("background_on");
+        } else {
+            header.removeClass("background_on");
+        }
+    });
+})
+
+// スクロールに合わせてヘッダー背景を表示（モバイル）
+$(function() {
+    let header = $('.l-header-mobile');
+    $(window).on('scroll', function () {
+        if ($(this).scrollTop() > 100) {
+            header.addClass("background_on");
+        } else {
+            header.removeClass("background_on");
+        }
+    });
+})
+
+// スキル部分のswiper
 const swiper = new Swiper('.swiper-container', {
     loop: true,
     grabCursor: true,
-    slidesPerView: 1,
+    direction: 'vertical',
+    slidesPerView: 2.5,
     spaceBetween: 20,
     speed: 1000,
     centeredSlides: true,
 
     breakpoints: {
         480: {
-            
             slidesPerView: 1.5,
+            direction: 'horizontal',
         },
         600: {
             slidesPerView: 2.5,
+            direction: 'horizontal',
         },
         960: {
             slidesPerView: 3.5,
+            direction: 'horizontal',
         },
     },
     

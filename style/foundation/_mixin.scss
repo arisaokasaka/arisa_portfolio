@@ -29,25 +29,91 @@
   }
 }
 
+// width
 @mixin content-width {
-  width: 90%;
+  width: 85%;
   max-width: 1000px;
   margin: 0 auto;
+
+  @include bp-480up() {
+    width: 90%;
+  }
 }
 
+// セクションタイトル
+@mixin sectionTitle() {
+  position: relative;
+  text-align: center;
+  color: $darkGray;
+  font-size: 0.9rem;
+  margin-bottom: 40px;
+
+  @include bp-600up() {
+    font-size: 1.5rem;
+    margin-bottom: $margin_between_title-content;
+    color: $black;
+  }
+}
+
+// セクションタイトルの疑似要素
 @mixin sectionTitle_pseudoElement($text, $translateX, $translateY) {
   content: $text;
   display: inline-block;
   position: absolute;
-  top: 30%;
-  left: 50%;
-  transform: translate($translateX, $translateY);
-  color: $lightGray;
-  font-size: 3rem;
   font-weight: 600;
   z-index: -100;
+  top: -110%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #434343;
+  font-size: 2rem;
 
   @include bp-600up {
+    top: 30%;
+    right: 0;
+    transform: translate($translateX, $translateY);
+    color: $lightGray;
+    font-size: 7rem;
+  }
+
+  @include bp-960up {
     font-size: 10rem;
+  }
+}
+
+// アバウトセクションの各コンテンツのタイトル
+@mixin about_contentsTitle {
+  position: relative;
+  line-height: 150px;
+  width: 150px;
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: 550;
+  color: $softBlack;
+  letter-spacing: 2px;
+  margin: 0 auto;
+
+  @include bp-600up() {
+    line-height: 200px;
+    width: 200px;
+    font-size: 1.4rem;
+  }
+}
+
+// aboutセクションのimage
+@mixin about_contentsTitle_image($image_url, $animation) {
+  content: "";
+  display: block;
+  position: absolute;
+  background-image: url($image_url);
+  background-size: contain;
+  background-repeat: none;
+  width: 150px;
+  height: 150px;
+  animation: 40s linear infinite $animation;
+
+  @include bp-600up() {
+    width: 200px;
+    height: 200px;
   }
 }

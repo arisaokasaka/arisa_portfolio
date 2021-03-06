@@ -1,12 +1,17 @@
 .p-about {
   @include content-width;
   padding-top: $section-top;
-  margin-bottom: $section-bottom;
+  // margin-bottom: 90px;
+
+  @include bp-600up {
+    margin-bottom: $section-bottom;
+  }
 
   & > h2 {
-    position: relative;
-    text-align: center;
-    margin-bottom: $margin_between_title-content;
+    @include sectionTitle;
+    // position: relative;
+    // text-align: center;
+    // margin-bottom: $margin_between_title-content;
 
     &::after {
       @include sectionTitle_pseudoElement("ABOUT", -100%, -50%);
@@ -15,37 +20,33 @@
 
   & > p {
     text-align: center;
+    font-size: 0.8rem;
+    line-height: 1.5rem;
+
+    @include bp-600up {
+      font-size: 0.9rem;
+    }
   }
 
   &__advantage {
     display: grid;
     margin-top: 60px;
+    max-width: 850px;
 
     @include bp-960up {
-      grid-template-columns: 300px 1fr;
+      grid-template-columns: 220px 1fr;
+      margin: 0 auto;
+      margin-top: 60px;
     }
 
     &__title {
-      position: relative;
-      line-height: 300px;
-      width: 300px;
-      text-align: center;
-      font-size: 1.5rem;
-      font-weight: 550;
-      color: $softBlack;
-      letter-spacing: 2px;
-      margin: 0 auto;
+      @include about_contentsTitle;
 
       &::before {
-        content: "";
-        display: block;
-        position: absolute;
-        background-image: url(../../../images/advantage_circle.png);
-        background-size: contain;
-        background-repeat: none;
-        width: 300px;
-        height: 300px;
-        animation: 35s linear infinite rotate_normal;
+        @include about_contentsTitle_image(
+          "../../../images/advantage_circle.png",
+          rotate_normal
+        );
       }
     }
 
@@ -54,7 +55,6 @@
       list-style: none;
       margin: 0 auto;
       margin-top: 30px;
-      max-width: 500px;
 
       @include bp-480up {
         width: 80%;
@@ -67,16 +67,21 @@
       @include bp-960up {
         width: fit-content;
         margin: 0;
-        margin-top: 54px;
+        margin-top: 25px;
         padding-left: 80px;
       }
 
       &__item {
-        font-size: 1.1rem;
+        font-size: 0.9rem;
         letter-spacing: 1px;
-        font-weight: 600;
-        margin-top: 20px;
+        font-weight: 500;
+        margin-top: 12px;
         cursor: pointer;
+
+        @include bp-600up {
+          font-size: 1rem;
+          margin-top: 15px;
+        }
 
         & > svg {
           margin-left: 8px;
@@ -106,33 +111,24 @@
   }
 
   &__vision {
-    margin-top: 60px;
     display: grid;
+    margin-top: 60px;
+    max-width: 850px;
+
     @include bp-960up {
-      grid-template-columns: 300px 1fr;
+      grid-template-columns: 220px 1fr;
+      margin: 0 auto;
+      margin-top: 60px;
     }
 
     &__title {
-      position: relative;
-      line-height: 220px;
-      width: 220px;
-      text-align: center;
-      font-size: 1.5rem;
-      font-weight: 550;
-      color: $softBlack;
-      letter-spacing: 2px;
-      margin: 0 auto;
+      @include about_contentsTitle;
 
       &::before {
-        content: "";
-        display: block;
-        position: absolute;
-        background-image: url(../../../images/vision_circle.png);
-        background-size: contain;
-        background-repeat: none;
-        width: 220px;
-        height: 220px;
-        animation: 35s linear infinite rotate_normal;
+        @include about_contentsTitle_image(
+          "../../../images/vision_circle.png",
+          rotate_normal
+        );
       }
     }
 
@@ -148,21 +144,29 @@
       @include bp-960up {
         padding-left: 80px;
         margin: 0;
-        margin-top: 30px;
+        margin-top: 25px;
       }
 
       & > li {
         display: flex;
         align-items: center;
-        font-size: 1.1rem;
-        font-weight: 600;
-        margin-top: 20px;
+        font-weight: 500;
+        font-size: 0.9rem;
+        margin-top: 12px;
+        letter-spacing: 1px;
+        cursor: pointer;
+
+        @include bp-600up {
+          font-size: 1rem;
+          margin-top: 15px;
+        }
 
         & > span {
           font-weight: 600;
           margin-right: 15px;
           font-size: 1.5rem;
           color: $gray;
+          padding-bottom: 1px;
         }
       }
     }

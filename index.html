@@ -29,11 +29,11 @@
     
 </head>
 <body>
-    <header class="l-header" id="header">
+    <header class="l-header">
         <div class="l-header__container">
-            <a href="#header">ARISA</a>
             <nav>
                 <ul>
+                    <li><a href="#hero">ARISA</a></li>
                     <li><a href="#works">WORKS</a></li>
                     <li><a href="#skills">SKILLS</a></li>
                     <li><a href="#about">ABOUT</a></li>
@@ -44,12 +44,12 @@
     </header>
 
     <div class="l-header-mobile">
-        <p>ARISA</p>
+        <a href="#hero">ARISA</a>
         <button class="l-header-mobile__btn">MENU</button>
     </div>
     <nav class="c-nav-mobile">
         <ul>
-            <li><a href="#header">TOP</a></li>
+            <li><a href="#hero">TOP</a></li>
             <li><a href="#works">WORKS</a></li>
             <li><a href="#skills">SKILLS</a></li>
             <li><a href="#about">ABOUT</a></li>
@@ -63,7 +63,7 @@
         </ul>
     </nav>
 
-    <div class="p-hero">
+    <div class="p-hero" id="hero">
         <div class="p-hero__container">
             <img src="/images/image_hero.png" alt="">
             <p>
@@ -81,7 +81,7 @@
                 <div class="p-works__container__item__image">
                     <img src="./images/bread-box.png" alt="">
                 </div>
-                <span>TypeScript&nbsp;/&nbsp;React&nbsp;/&nbsp;PHP&nbsp;<br/>/&nbsp;Laravel&nbsp;/&nbsp;レスポンシブ</span>
+                <span>TypeScript,&nbsp;React,&nbsp;PHP,<br/>&nbsp;Laravel,&nbsp;レスポンシブ</span>
                 <div class="p-works__container__item__modal">
                     <div class="p-works__container__item__modal__overlay"></div>
                     <div class="p-works__container__item__modal__container">
@@ -117,7 +117,7 @@
                 <div class="p-works__container__item__image">
                     <img src="./images/portfolio.png" alt="">
                 </div>
-                <span>HTML&nbsp;/&nbsp;Sass&nbsp;/&nbsp;JavaScript&nbsp;/<br/>&nbsp;jQuery&nbsp;/&nbsp;レスポンシブ</span>
+                <span>HTML,&nbsp;Sass,&nbsp;JavaScript,<br/>&nbsp;jQuery,&nbsp;レスポンシブ</span>
                 <div class="p-works__container__item__modal">
                     <div class="p-works__container__item__modal__overlay"></div>
                     <div class="p-works__container__item__modal__container">
@@ -152,7 +152,7 @@
                 <div class="p-works__container__item__image">
                     <img src="./images/techWomen.png" alt="">
                 </div>
-                <span>共同開発&nbsp;/&nbsp;JavaScript&nbsp;/&nbsp;jQuery&nbsp;/<br/>&nbsp;Ruby on Rails&nbsp;/&nbsp;レスポンシブ</span>
+                <span>共同開発,&nbsp;JavaScript,&nbsp;jQuery,<br/>&nbsp;Ruby on Rails,&nbsp;レスポンシブ</span>
                 <div class="p-works__container__item__modal">
                     <div class="p-works__container__item__modal__overlay"></div>
                     <div class="p-works__container__item__modal__container">
@@ -187,7 +187,7 @@
                 <div class="p-works__container__item__image">
                     <img src="./images/langSchool.png" alt="">
                 </div>
-                <span>HTML&nbsp;/&nbsp;CSS&nbsp;/&nbsp;JavaScript&nbsp;/&nbsp;React</span>
+                <span>HTML,&nbsp;CSS,<br/>JavaScript,&nbsp;React</span>
                 <div class="p-works__container__item__modal">
                     <div class="p-works__container__item__modal__overlay"></div>
                     <div class="p-works__container__item__modal__container">
@@ -222,7 +222,7 @@
                 <div class="p-works__container__item__image">
                     <img src="./images/toDoList.png" alt="">
                 </div>
-                <span>HTML&nbsp;/&nbsp;CSS&nbsp;/&nbsp;JavaScript</span>
+                <span>HTML,&nbsp;CSS,<br/>JavaScript</span>
                 <div class="p-works__container__item__modal">
                     <div class="p-works__container__item__modal__overlay"></div>
                     <div class="p-works__container__item__modal__container">
@@ -252,7 +252,6 @@
                         </div>
                     </div>
                 </div>
-                <span>HTML&nbsp;/&nbsp;CSS&nbsp;/&nbsp;JavaScript</span>
             </div>
         </div>
     </section>
@@ -294,7 +293,7 @@
                     </div>
                     <div class="swiper-slide">
                         <ul>
-                            <li><i class="devicon-google-plain colored"></i>Google Apps Script<div class="rateit" data-rateit-value="3" data-rateit-ispreset="true" data-rateit-readonly="true"></div></li>
+                            <li><i class="devicon-google-plain colored"></i><span>GAS</span><span>Google Apps Script</span><div class="rateit" data-rateit-value="3" data-rateit-ispreset="true" data-rateit-readonly="true"></div></li>
                             <li><img src="https://img.icons8.com/fluent/48/000000/microsoft-word-2019.png"/>Word<div class="rateit" data-rateit-value="4" data-rateit-ispreset="true" data-rateit-readonly="true"></div></li>
                             <li><img src="https://img.icons8.com/color/48/000000/microsoft-excel-2019--v1.png"/>Execel<div class="rateit" data-rateit-value="4" data-rateit-ispreset="true" data-rateit-readonly="true"></div></li>
                             <li><img src="https://img.icons8.com/color/48/000000/microsoft-powerpoint-2019.png"/>PowerPoint<div class="rateit" data-rateit-value="4" data-rateit-ispreset="true" data-rateit-readonly="true"></div></li>
@@ -350,9 +349,9 @@
     </section>
     
     <aside class="l-side">
-        <a href="https://github.com/arisaokasaka"><i class="fab fa-github"></i>Github</a>
-        <a href="https://twitter.com/dev_design8"><i class="fab fa-twitter"></i>Twitter</a>
-        <a href="https://de-milestones.com/"><i class="fas fa-blog"></i>BLOG</a>
+        <a href="https://github.com/arisaokasaka"><i class="fab fa-github"></i><span>Github</span></a>
+        <a href="https://twitter.com/dev_design8"><i class="fab fa-twitter"></i><span>Twitter</span></a>
+        <a href="https://de-milestones.com/"><i class="fas fa-blog"></i><span>BLOG</span></a>
     </aside>
 
     <footer class="l-footer">
