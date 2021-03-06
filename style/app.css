@@ -671,7 +671,8 @@ body {
 }
 
 .c-nav-mobile > ul > li {
-  margin-bottom: 20px;
+  height: 2.5rem;
+  margin-bottom: 15px;
   text-align: center;
   position: relative;
 }
@@ -681,13 +682,14 @@ body {
   color: #252525;
   font-weight: 550;
   text-decoration: none;
-  padding: 10px 0;
+  width: 100%;
+  height: 100%;
 }
 
 .c-nav-mobile > ul > li::after {
   position: absolute;
   left: 50%;
-  bottom: -4px;
+  bottom: 3px;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
   font-size: 0.5rem;
@@ -714,10 +716,29 @@ body {
   content: "お問合せ";
 }
 
+.c-nav-mobile > ul > li:nth-child(6) {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 .c-nav-mobile > ul > li:nth-child(6) > a {
   font-size: 1.2rem;
   margin: 0 5px;
   color: #252525;
+}
+
+.c-nav-mobile > ul > li:last-child {
+  cursor: pointer;
+  height: 2rem;
+  width: 2rem;
+  line-height: 2rem;
+  margin: 0 auto;
+  border-radius: 50%;
+}
+
+.c-nav-mobile > ul > li:last-child:hover {
+  background-color: #ecebeb;
 }
 
 .c-nav-mobile > ul > li:last-child > i {
@@ -754,26 +775,25 @@ body {
 
 .p-hero__container > img {
   position: absolute;
-  top: 15%;
+  top: 10%;
   left: -34%;
   height: 450px;
 }
 
 @media screen and (min-width: 480px) {
   .p-hero__container > img {
-    top: 15%;
     left: -15%;
   }
 }
 
 @media screen and (min-width: 600px) {
   .p-hero__container > img {
-    top: 21%;
+    top: 15%;
     left: -5%;
   }
 }
 
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 960px) {
   .p-hero__container > img {
     top: 20%;
     left: 0;
@@ -782,7 +802,7 @@ body {
 
 .p-hero__container > p {
   position: absolute;
-  top: 37%;
+  top: 30%;
   left: 30%;
   width: 70%;
   line-height: 1.8rem;
@@ -793,7 +813,6 @@ body {
 
 @media screen and (min-width: 480px) {
   .p-hero__container > p {
-    top: 37%;
     left: 33%;
     width: 60%;
   }
@@ -801,7 +820,6 @@ body {
 
 @media screen and (min-width: 600px) {
   .p-hero__container > p {
-    top: 37%;
     left: 33%;
     width: 70%;
     font-size: 1.2rem;
@@ -982,6 +1000,7 @@ body {
   background-color: #fcf9f9;
   border-radius: 5px;
   padding: 15px;
+  padding-bottom: 36px;
 }
 
 @media screen and (min-width: 960px) {
@@ -995,18 +1014,29 @@ body {
 
 .p-works__container__item__modal__container__btn--close {
   position: absolute;
-  top: 5px;
-  right: 5px;
+  bottom: 8px;
+  right: 10px;
   width: 2rem;
   height: 2rem;
   border-radius: 50%;
+  color: #59636a;
+  border: 1px solid #59636a;
   outline: none;
   cursor: pointer;
 }
 
+@media screen and (min-width: 600px) {
+  .p-works__container__item__modal__container__btn--close {
+    top: 8px;
+    right: 20px;
+    border: none;
+    color: #252525;
+  }
+}
+
 @media screen and (min-width: 960px) {
   .p-works__container__item__modal__container__btn--close {
-    right: 20px;
+    top: 10px;
   }
 }
 
@@ -1025,8 +1055,7 @@ body {
 .p-works__container__item__modal__container > h3 {
   width: 100%;
   font-size: 0.9rem;
-  margin: 10px 0;
-  padding-right: 1.5rem;
+  margin-bottom: 10px;
 }
 
 @media screen and (min-width: 960px) {
@@ -1059,13 +1088,22 @@ body {
 }
 
 .p-works__container__item__modal__container__content__explain > span {
-  display: block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   font-size: 0.8rem;
   padding-left: 3px;
+  white-space: nowrap;
 }
 
 .p-works__container__item__modal__container__content__explain > span > a {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  overflow: hidden;
+  white-space: normal;
   color: #246edd;
+  pointer-events: all;
 }
 
 .p-works__container__item__modal__container__content__explain > label {
@@ -1096,8 +1134,14 @@ body {
 
 .p-works__container__item__modal__container__content__image {
   width: 100%;
-  height: 200px;
+  height: 120px;
   margin-bottom: 10px;
+}
+
+@media screen and (min-width: 480px) {
+  .p-works__container__item__modal__container__content__image {
+    height: 200px;
+  }
 }
 
 @media screen and (min-width: 960px) {
@@ -1121,6 +1165,8 @@ body {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+  -o-object-position: top;
+     object-position: top;
   display: none;
 }
 

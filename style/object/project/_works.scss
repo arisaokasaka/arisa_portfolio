@@ -87,6 +87,7 @@
           background-color: $white;
           border-radius: 5px;
           padding: 15px;
+          padding-bottom: 36px;
 
           @include bp-960up {
             width: 700px;
@@ -97,16 +98,25 @@
 
           &__btn--close {
             position: absolute;
-            top: 5px;
-            right: 5px;
+            bottom: 8px;
+            right: 10px;
             width: 2rem;
             height: 2rem;
             border-radius: 50%;
+            color: $blueGray;
+            border: 1px solid $blueGray;
             outline: none;
             cursor: pointer;
 
-            @include bp-960up {
+            @include bp-600up {
+              top: 8px;
               right: 20px;
+              border: none;
+              color: $black;
+            }
+
+            @include bp-960up {
+              top: 10px;
             }
 
             &:hover {
@@ -124,8 +134,7 @@
           & > h3 {
             width: 100%;
             font-size: 0.9rem;
-            margin: 10px 0;
-            padding-right: 1.5rem;
+            margin-bottom: 10px;
 
             @include bp-960up {
               margin-bottom: 1rem;
@@ -146,12 +155,19 @@
 
             &__explain {
               & > span {
-                display: block;
+                display: flex;
                 font-size: 0.8rem;
                 padding-left: 3px;
+                white-space: nowrap;
 
                 & > a {
+                  display: -webkit-box;
+                  -webkit-box-orient: vertical;
+                  -webkit-line-clamp: 1;
+                  overflow: hidden;
+                  white-space: normal;
                   color: $link-color;
+                  pointer-events: all;
                 }
               }
 
@@ -182,8 +198,12 @@
 
             &__image {
               width: 100%;
-              height: 200px;
+              height: 120px;
               margin-bottom: 10px;
+
+              @include bp-480up {
+                height: 200px;
+              }
 
               @include bp-960up {
                 display: grid;
@@ -199,6 +219,7 @@
                 width: 100%;
                 height: 100%;
                 object-fit: cover;
+                object-position: top;
                 display: none;
 
                 @include bp-960up {
