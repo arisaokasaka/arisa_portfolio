@@ -40,7 +40,7 @@
 
       &::before {
         @include about_contentsTitle_image(
-          "./images/advantage_circle.png",
+          "../images/advantage_circle.png",
           rotate_normal
         );
       }
@@ -122,7 +122,7 @@
 
       &::before {
         @include about_contentsTitle_image(
-          "./images/vision_circle.png",
+          "../images/vision_circle.png",
           rotate_normal
         );
       }
