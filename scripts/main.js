@@ -76,6 +76,12 @@ $(function() {
     });
 })
 
+// リンク先を開く
+$(".u-link").on('click', function() {
+    window.open($(this).attr('href'), '_blank'); 
+    return false;
+});
+
 // スキル部分のswiper
 const swiper = new Swiper('.swiper-container', {
     loop: true,
@@ -84,20 +90,22 @@ const swiper = new Swiper('.swiper-container', {
     slidesPerView: 2.5,
     spaceBetween: 20,
     speed: 1000,
-    centeredSlides: true,
 
     breakpoints: {
         480: {
             slidesPerView: 1.5,
             direction: 'horizontal',
+            centeredSlides: true,
         },
         600: {
             slidesPerView: 2.5,
             direction: 'horizontal',
+            centeredSlides: true,
         },
         960: {
             slidesPerView: 3.5,
             direction: 'horizontal',
+            centeredSlides: true,
         },
     },
     
