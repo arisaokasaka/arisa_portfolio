@@ -1435,7 +1435,7 @@ body {
   content: "";
   display: block;
   position: absolute;
-  background-image: url("../../../images/advantage_circle.png");
+  background-image: url("./images/advantage_circle.png");
   background-size: contain;
   background-repeat: none;
   width: 150px;
@@ -1563,7 +1563,7 @@ body {
   content: "";
   display: block;
   position: absolute;
-  background-image: url("../../../images/vision_circle.png");
+  background-image: url("./images/vision_circle.png");
   background-size: contain;
   background-repeat: none;
   width: 150px;
