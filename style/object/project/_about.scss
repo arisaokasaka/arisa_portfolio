@@ -1,6 +1,7 @@
 .p-about {
   @include content-width;
   padding-top: $section-top;
+  // margin-bottom: 90px;
 
   @include bp-600up {
     margin-bottom: $section-bottom;
@@ -8,6 +9,9 @@
 
   & > h2 {
     @include sectionTitle;
+    // position: relative;
+    // text-align: center;
+    // margin-bottom: $margin_between_title-content;
 
     &::after {
       @include sectionTitle_pseudoElement("ABOUT", -100%, -50%);
@@ -40,7 +44,7 @@
 
       &::before {
         @include about_contentsTitle_image(
-          "./images/advantage_circle.png",
+          "../../../images/advantage_circle.png",
           rotate_normal
         );
       }
@@ -122,7 +126,7 @@
 
       &::before {
         @include about_contentsTitle_image(
-          "./images/vision_circle.png",
+          "../../../images/vision_circle.png",
           rotate_normal
         );
       }
