@@ -494,10 +494,16 @@ body {
   .l-side {
     display: block;
     top: 50%;
-    right: -15px;
+    right: -90px;
     left: auto;
     -webkit-transform: translateY(-50%) rotate(90deg);
             transform: translateY(-50%) rotate(90deg);
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .l-side {
+    right: -15px;
   }
 }
 
@@ -542,13 +548,13 @@ body {
 .l-side > a > svg {
   color: #252525;
   font-size: 1rem;
-  margin-right: 0.3rem;
   background-color: #fcf9f9;
   border-radius: 50%;
 }
 
 @media screen and (min-width: 960px) {
   .l-side > a > svg {
+    margin-right: 0.3rem;
     background-color: transparent;
   }
 }
@@ -916,13 +922,6 @@ body {
       justify-content: space-around;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  row-gap: 30px;
-}
-
-@media screen and (min-width: 960px) {
-  .p-works__container {
-    row-gap: 50px;
-  }
 }
 
 .p-works__container__item {
@@ -933,6 +932,17 @@ body {
   margin: 0 auto;
   -webkit-box-shadow: 2px 2px 7px 0 #a7a7a7;
           box-shadow: 2px 2px 7px 0 #a7a7a7;
+  margin-bottom: 30px;
+}
+
+.p-works__container__item:last-child {
+  margin-bottom: 0;
+}
+
+@media screen and (min-width: 960px) {
+  .p-works__container__item:first-child {
+    margin-bottom: 50px;
+  }
 }
 
 .p-works__container__item__image {
@@ -945,6 +955,8 @@ body {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+  -o-object-position: top;
+     object-position: top;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
@@ -1001,6 +1013,7 @@ body {
   border-radius: 5px;
   padding: 15px;
   padding-bottom: 36px;
+  overflow: hidden;
 }
 
 @media screen and (min-width: 960px) {
@@ -1066,7 +1079,6 @@ body {
 }
 
 .p-works__container__item__modal__container__content {
-  overflow: hidden;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1155,7 +1167,7 @@ body {
     row-gap: 8px;
     -webkit-column-gap: 8px;
             column-gap: 8px;
-    height: 100%;
+    height: 470px;
     margin: 0;
   }
 }
@@ -1167,6 +1179,8 @@ body {
      object-fit: cover;
   -o-object-position: top;
      object-position: top;
+  -webkit-box-shadow: 0px 1px 5px 0 #a7a7a7;
+          box-shadow: 0px 1px 5px 0 #a7a7a7;
   display: none;
 }
 
@@ -1740,6 +1754,79 @@ body {
 @media screen and (min-width: 600px) {
   .u-mobile_none {
     display: block;
+  }
+}
+
+.tooltip-after, .u-tooltip--breadBox:hover::after, .u-tooltip--techWomen:hover::after, .u-tooltip--side:hover::after {
+  position: absolute;
+  top: -46px;
+  color: #fcf9f9;
+  display: block;
+  padding: 5px;
+  font-size: 0.5rem;
+  background-color: #5a5a5a;
+  border-radius: 2px;
+  white-space: pre;
+}
+
+.tooltip-before, .u-tooltip--breadBox:hover::before, .u-tooltip--techWomen:hover::before, .u-tooltip--side:hover::before {
+  content: "";
+  position: absolute;
+  top: -7px;
+  left: 41px;
+  color: #5a5a5a;
+  border: 6px solid transparent;
+  border-top: 6px solid #5a5a5a;
+  margin-left: -15px;
+}
+
+.u-tooltip--breadBox {
+  position: relative;
+}
+
+.u-tooltip--breadBox:hover::after {
+  content: "ユーザー・店舗それぞれにゲストログインをご用意しています。\Aまた、店舗ログインは、トップページの最下部よりアクセスできます。";
+}
+
+.u-tooltip--techWomen {
+  position: relative;
+}
+
+.u-tooltip--techWomen:hover::after {
+  content: "画面右上のゲストログインボタンから、\Aメールアドレスとパスワードを入力せずにログインできます。";
+}
+
+.u-tooltip--side:hover {
+  cursor: pointer;
+}
+
+.u-tooltip--side:hover::after {
+  content: "GitHub\A 12月後半よりほぼ毎日使用\A\A Twitter\A 12月後半より約3か月間、毎日の学習記録を投稿\A\A Blog\A 学んだことやエラーの解決方法をアウトプット";
+  top: 11px;
+  left: -199px;
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+  font-size: 0.6rem;
+  opacity: 0;
+}
+
+@media screen and (min-width: 960px) {
+  .u-tooltip--side:hover::after {
+    opacity: 1;
+  }
+}
+
+.u-tooltip--side:hover::before {
+  top: 4px;
+  left: -5px;
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+  opacity: 0;
+}
+
+@media screen and (min-width: 960px) {
+  .u-tooltip--side:hover::before {
+    opacity: 1;
   }
 }
 /*# sourceMappingURL=app.css.map */

@@ -1,0 +1,89 @@
+.tooltip-after {
+  position: absolute;
+  top: -46px;
+  color: $white;
+  display: block;
+  padding: 5px;
+  font-size: 0.5rem;
+  background-color: $darkGray;
+  border-radius: 2px;
+  white-space: pre;
+}
+
+.tooltip-before {
+  content: "";
+  position: absolute;
+  top: -7px;
+  left: 41px;
+  color: $darkGray;
+  border: 6px solid transparent;
+  border-top: 6px solid $darkGray;
+  margin-left: -15px;
+}
+
+.u-tooltip--breadBox {
+  position: relative;
+
+  &:hover {
+    &::after {
+      content: "ユーザー・店舗それぞれにゲストログインをご用意しています。\Aまた、店舗ログインは、トップページの最下部よりアクセスできます。";
+      @extend .tooltip-after;
+    }
+
+    &::before {
+      @extend .tooltip-before;
+    }
+  }
+}
+
+.u-tooltip--techWomen {
+  position: relative;
+
+  &:hover {
+    &::after {
+      content: "画面右上のゲストログインボタンから、\Aメールアドレスとパスワードを入力せずにログインできます。";
+      @extend .tooltip-after;
+    }
+
+    &::before {
+      @extend .tooltip-before;
+    }
+  }
+}
+
+.u-tooltip--side {
+  &:hover {
+    cursor: pointer;
+
+    &::after {
+      @extend .tooltip-after;
+      content: "GitHub\A
+      12月後半よりほぼ毎日使用\A\A
+      Twitter\A
+      12月後半より約3か月間、毎日の学習記録を投稿\A\A
+      Blog\A
+      学んだことやエラーの解決方法をアウトプット";
+      top: 11px;
+      left: -199px;
+      transform: rotate(-90deg);
+      font-size: 0.6rem;
+      opacity: 0;
+
+      @include bp-960up {
+        opacity: 1;
+      }
+    }
+
+    &::before {
+      @extend .tooltip-before;
+      top: 4px;
+      left: -5px;
+      transform: rotate(-90deg);
+      opacity: 0;
+
+      @include bp-960up {
+        opacity: 1;
+      }
+    }
+  }
+}

@@ -13,9 +13,13 @@
   @include bp-960up {
     display: block;
     top: 50%;
-    right: -15px;
+    right: -90px;
     left: auto;
     transform: translateY(-50%) rotate(90deg);
+  }
+
+  @include bp-1280up {
+    right: -15px;
   }
 
   & > a {
@@ -50,11 +54,11 @@
     & > svg {
       color: $black;
       font-size: 1rem;
-      margin-right: 0.3rem;
       background-color: $white;
       border-radius: 50%;
 
       @include bp-960up {
+        margin-right: 0.3rem;
         background-color: transparent;
       }
     }

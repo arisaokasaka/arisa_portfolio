@@ -77,8 +77,8 @@ $(function() {
 })
 
 // リンク先を開く
-$(".u-link").on('click', function() {
-    window.open($(this).attr('href'), '_blank'); 
+$(".link-js").on('click', function() {
+    window.open($(this).attr('href'), '_blank', 'noopener'); 
     return false;
 });
 

@@ -19,7 +19,7 @@
           h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
         })(document);
       </script>
-      
+    <link rel="shortcut icon" href="favicon.ico" type="image/vnd.microsoft.icon">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
@@ -55,9 +55,9 @@
             <li><a href="#about">ABOUT</a></li>
             <li><a href="#contact">CONTACT</a></li>
             <li>
-                <a href="https://github.com/arisaokasaka"><i class="fab fa-github"></i></a>
-                <a href="https://twitter.com/dev_design8"><i class="fab fa-twitter"></i></a>
-                <a href="https://de-milestones.com/"><i class="fas fa-blog"></i></a>
+                <a href="https://github.com/arisaokasaka" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i></a>
+                <a href="https://twitter.com/dev_design8" target="_blank" rel="noopener noreferrer"><i class="fab fa-twitter"></i></a>
+                <a href="https://de-milestones.com/" target="_blank" rel="noopener noreferrer"><i class="fas fa-blog"></i></a>
             </li>
             <li class="c-nav-mobile__btn--close"><i class="fas fa-times"></i></li>
         </ul>
@@ -65,7 +65,7 @@
 
     <div class="p-hero" id="hero">
         <div class="p-hero__container">
-            <img src="./images/image_hero.png" alt="">
+            <img src="./images/image_hero.png" alt="ヒーロー画像">
             <p>
                 はじめまして。岡坂有紗です。
                 <br/>創ることの楽しさ・喜びにハマるとともに、
@@ -79,7 +79,7 @@
         <div class="p-works__container">
             <div class="p-works__container__item">
                 <div class="p-works__container__item__image">
-                    <img src="./images/bread-box.png" alt="">
+                    <img src="./images/works/bread-box_1.png" alt="パンBOXのトップ画像">
                 </div>
                 <span>TypeScript,&nbsp;React,&nbsp;PHP,<br/>&nbsp;Laravel,&nbsp;レスポンシブ</span>
                 <div class="p-works__container__item__modal">
@@ -90,24 +90,30 @@
                         <div class="p-works__container__item__modal__container__content">
                             <div class="p-works__container__item__modal__container__content__explain">
                                 <label>URL</label>
-                                <span>公開URL：<a href="">https:xxxxx</a></span>
-                                <span>機能面解説と制作背景：<a href="">https:xxxxx</a></span>
+                                <span class="u-tooltip--breadBox">公開先：<a class="link-js" href="https://bread-box.net/">https://bread-box.net/</a></span>
+                                <span>GitHub：<a class="link-js" href="">https:xxxxx</a></span>
+                                <span>機能面解説と制作背景：<a class="link-js" href="https://de-milestones.com/bread-box/">https://de-milestones.com/bread-box/</a></span>
                                 <label>コンセプト</label>
-                                <p>パン屋さんのまとめサイト。店舗側はメニューやお店の思いを公開したり、ユーザーはレビューやお気に入り登録ができます。</p>
+                                <p>パン屋に特化したグルメサイト</p>
                                 <label>制作期間</label>
                                 <p>約2か月</p>
                                 <label class="u-mobile_none">担当</label>
                                 <p class="u-mobile_none">全般（デザインから開発まで）</p>
                                 <label>使用言語・技術</label>
-                                <p>HTML / Sass / TypeScript / React / PHP / Laravel / postgreSQL / AWS</p>
+                                <p>HTML / Sass / TypeScript / React / PHP / Laravel / PostgreSQL / AWS</p>
                                 <label>ポイント</label>
-                                <p>SPAです。また、使いやすいUI・UXを意識してデザイン・実装を行いました。</p>
+                                <p>
+                                    ・全て非同期通信<br/>
+                                    ・アトミックデザインを意識したコンポーネント管理<br/>
+                                    ・使いやすいUI<br/>
+                                    ・レスポンシブ対応
+                                </p>
                             </div>
                             <div class="p-works__container__item__modal__container__content__image">
-                                <img src="./images/bread-box.png" alt="">
-                                <img src="./images/bread-box.png" alt="">
-                                <img src="./images/bread-box.png" alt="">
-                                <img src="./images/bread-box.png" alt="">
+                                <img src="./images/works/bread-box_1.png" alt="パンBOXのトップ画像">
+                                <img src="./images/works/bread-box_2.png" alt="パンBOXのモバイル画像">
+                                <img src="./images/works/bread-box_3.png" alt="パンBOXの画像３">
+                                <img src="./images/works/bread-box_4.png" alt="パンBOXの画像４">
                             </div>
                         </div>
                     </div>
@@ -115,7 +121,7 @@
             </div>
             <div class="p-works__container__item">
                 <div class="p-works__container__item__image">
-                    <img src="./images/portfolio.png" alt="">
+                    <img src="./images/works/portfolio_1.png" alt="ポートフォリオサイトのトップ画像">
                 </div>
                 <span>HTML,&nbsp;Sass,&nbsp;JavaScript,<br/>&nbsp;jQuery,&nbsp;レスポンシブ</span>
                 <div class="p-works__container__item__modal">
@@ -126,23 +132,28 @@
                         <div class="p-works__container__item__modal__container__content">
                             <div class="p-works__container__item__modal__container__content__explain">
                                 <label>URL</label>
-                                <span>公開URL：<a href="">https:xxxxx</a></span>
+                                <span>公開先：<a class="link-js" href="https://arisaokasaka.github.io/arisa_portfolio/">https://arisaokasaka.github.io/arisa_portfolio/</a></span>
+                                <span>GitHub：<a class="link-js" href="https://github.com/arisaokasaka/arisa_portfolio">https://github.com/arisaokasaka/arisa_portfolio</a></span>
                                 <label>コンセプト</label>
-                                <p>私、岡坂有紗のポートフォリオサイトです。</p>
+                                <p>私、岡坂有紗のポートフォリオサイト</p>
                                 <label>制作期間</label>
-                                <p>約3日(その後修正あり)</p>
+                                <p>3日(その後文章の修正あり)</p>
                                 <label>担当</label>
                                 <p>全般（デザインから開発まで）</p>
                                 <label>使用言語・技術</label>
-                                <p>HTML / Sass / jQuery</p>
+                                <p>HTML / Sass / JavaScript / jQuery</p>
                                 <label>ポイント</label>
-                                <p>就職活動で見て頂くために作成したので、自分自身の強みやビジョンも含めました。レスポンシブにも対応しています。</p>
+                                <p>
+                                    ・基本的な挙動を取り入れること（Swiper, モーダル, スクロールに応じた挙動等）<br/>
+                                    ・CSSアニメーションを使用<br/>
+                                    ・レスポンシブ対応
+                                </p>
                             </div>
                             <div class="p-works__container__item__modal__container__content__image">
-                                <img src="./images/portfolio.png" alt="">
-                                <img src="./images/bread-box.png" alt="">
-                                <img src="./images/bread-box.png" alt="">
-                                <img src="./images/bread-box.png" alt="">
+                                <img src="./images/works/portfolio_1.png" alt="ポートフォリオサイトのトップ画像">
+                                <img src="./images/works/portfolio_2.png" alt="ポートフォリオサイトのモバイル画像">
+                                <img src="./images/works/portfolio_3.png" alt="ポートフォリオサイトの画像２">
+                                <img src="./images/works/portfolio_4.png" alt="ポートフォリオサイトの画像３">
                             </div>
                         </div>
                     </div>
@@ -150,7 +161,7 @@
             </div>
             <div class="p-works__container__item">
                 <div class="p-works__container__item__image">
-                    <img src="./images/techWomen.png" alt="">
+                    <img src="./images/works/techWomen_1.png" alt="Tech女子図鑑のトップ画像">
                 </div>
                 <span>共同開発,&nbsp;JavaScript,&nbsp;jQuery,<br/>&nbsp;Ruby on Rails,&nbsp;レスポンシブ</span>
                 <div class="p-works__container__item__modal">
@@ -161,9 +172,11 @@
                         <div class="p-works__container__item__modal__container__content">
                             <div class="p-works__container__item__modal__container__content__explain">
                                 <label>URL</label>
-                                <span>公開URL：<a class="u-link" href="https://tech-women-reference.herokuapp.com/">https://tech-women-reference.herokuapp.com/</a></span>
+                                <span class="u-tooltip--techWomen">公開先：<a class="link-js" href="https://tech-women-reference.herokuapp.com/">https://tech-women-reference.herokuapp.com/</a></span>
+                                <span>GitHub：<a class="link-js" href="https://github.com/ikemomo/tenkue-girls-app">https://github.com/ikemomo/tenkue-girls-app</a></span>
+                                <span>デザインカンプ：<a class="link-js" href="https://xd.adobe.com/view/cf53e491-ee09-4ce9-aef3-2ad641ae1bd8-9a00/">https://xd.adobe.com/view/cf53e491-ee09-4ce9-aef3-2ad641ae1bd8-9a00/</a></span>
                                 <label>コンセプト</label>
-                                <p>どんな女性エンジニアがいるのか、どんなキャリアを歩んでいるのかが分かるサイトです。</p>
+                                <p>どんな女性エンジニアがいるのか、どんなキャリアを歩んでいるのかが分かるサイト</p>
                                 <label>制作期間</label>
                                 <p>約1.5か月</p>
                                 <label>担当</label>
@@ -171,13 +184,13 @@
                                 <label>使用言語・技術</label>
                                 <p>HTML / Sass / JavaScript / jQuery</p>
                                 <label>ポイント</label>
-                                <p>共同開発だったので、GitHubを利用しながらチーム開発の基本を学びました。</p>
+                                <p>・Git/GitHubを用いたチーム開発<br/>・FLOCSS設計を採用</p>
                             </div>
                             <div class="p-works__container__item__modal__container__content__image">
-                                <img src="./images/techWomen.png" alt="">
-                                <img src="./images/bread-box.png" alt="">
-                                <img src="./images/bread-box.png" alt="">
-                                <img src="./images/bread-box.png" alt="">
+                                <img src="./images/works/techWomen_1.png" alt="Tech女子図鑑のトップ画像">
+                                <img src="./images/works/techWomen_2.png" alt="Tech女子図鑑のモバイル画像">
+                                <img src="./images/works/techWomen_3.png" alt="Tech女子図鑑の画像３">
+                                <img src="./images/works/techWomen_4.png" alt="Tech女子図鑑の画像４">
                             </div>
                         </div>
                     </div>
@@ -185,7 +198,7 @@
             </div>
             <div class="p-works__container__item">
                 <div class="p-works__container__item__image">
-                    <img src="./images/langSchool.png" alt="">
+                    <img src="./images/works/langSchool_1.png" alt="語学スクールサイトのトップ画像">
                 </div>
                 <span>HTML,&nbsp;CSS,<br/>JavaScript,&nbsp;React</span>
                 <div class="p-works__container__item__modal">
@@ -196,23 +209,24 @@
                         <div class="p-works__container__item__modal__container__content">
                             <div class="p-works__container__item__modal__container__content__explain">
                                 <label>URL</label>
-                                <span>公開URL：<a href="">https:xxxxx</a></span>
+                                <span>公開先：<a class="link-js" href="https://mps-language-school.netlify.app/">https://mps-language-school.netlify.app/</a></span>
+                                <span>GitHub：<a class="link-js" href="https://github.com/arisaokasaka/lp-languageSchool">https://github.com/arisaokasaka/lp-languageSchool</a></span>
                                 <label>コンセプト</label>
-                                <p>どんな女性エンジニアがいるのか、どんなキャリアを歩んでいるのかが分かるサイトです。</p>
+                                <p>語学学習塾のランディングページ</p>
                                 <label>制作期間</label>
-                                <p>約1.5か月</p>
+                                <p>約1週間</p>
                                 <label>担当</label>
-                                <p>デザイン、フロントエンド</p>
+                                <p>全般（デザインから開発まで）</p>
                                 <label>使用言語・技術</label>
-                                <p>HTML / CSS / JavaScript</p>
+                                <p>HTML / CSS / JavaScript / React</p>
                                 <label>ポイント</label>
-                                <p></p>
+                                <p>・Reactを用いたコンポーネント管理<br/>・モーダル等もstateを使用して実装</p>
                             </div>
                             <div class="p-works__container__item__modal__container__content__image">
-                                <img src="./images/langSchool.png" alt="">
-                                <img src="./images/bread-box.png" alt="">
-                                <img src="./images/bread-box.png" alt="">
-                                <img src="./images/bread-box.png" alt="">
+                                <img src="./images/works/langSchool_1.png" alt="語学スクールサイトのトップ画像">
+                                <img src="./images/works/langSchool_2.png" alt="語学スクールサイトの画像２">
+                                <img src="./images/works/langSchool_3.png" alt="語学スクールサイトの画像３">
+                                <img src="./images/works/langSchool_4.png" alt="語学スクールサイトの画像４">
                             </div>
                         </div>
                     </div>
@@ -220,7 +234,7 @@
             </div>
             <div class="p-works__container__item">
                 <div class="p-works__container__item__image">
-                    <img src="./images/toDoList.png" alt="">
+                    <img src="./images/works/toDoList_1.png" alt="toDoリストのトップ画像">
                 </div>
                 <span>HTML,&nbsp;CSS,<br/>JavaScript</span>
                 <div class="p-works__container__item__modal">
@@ -231,24 +245,24 @@
                         <div class="p-works__container__item__modal__container__content">
                             <div class="p-works__container__item__modal__container__content__explain">
                                 <label>URL</label>
-                                <span>公開先：<a class="u-link" href="https://arisaokasaka.github.io/todo-list/">https://arisaokasaka.github.io/todo-list/</a></span>
-                                <span>GitHub：<a class="u-link" href="https://github.com/arisaokasaka/todo-list">https://github.com/arisaokasaka/todo-list</a></span>
+                                <span>公開先：<a class="link-js" href="https://arisaokasaka.github.io/todo-list/">https://arisaokasaka.github.io/todo-list/</a></span>
+                                <span>GitHub：<a class="link-js" href="https://github.com/arisaokasaka/todo-list">https://github.com/arisaokasaka/todo-list</a></span>
                                 <label>コンセプト</label>
-                                <p>どんな女性エンジニアがいるのか、どんなキャリアを歩んでいるのかが分かるサイトです。</p>
+                                <p>シンプルなToDoリスト</p>
                                 <label>制作期間</label>
-                                <p>約1.5か月</p>
+                                <p>約1日</p>
                                 <label>担当</label>
-                                <p>デザイン、フロントエンド</p>
+                                <p>全般（デザインから開発まで）</p>
                                 <label>使用言語・技術</label>
                                 <p>HTML / CSS / JavaScript</p>
                                 <label>ポイント</label>
-                                <p></p>
+                                <p>・最低限のCRUD機能を備える<br/>（ToDoの登録、編集、削除が可能）</p>
                             </div>
                             <div class="p-works__container__item__modal__container__content__image">
-                                <img src="./images/toDoList.png" alt="">
-                                <img src="./images/bread-box.png" alt="">
-                                <img src="./images/bread-box.png" alt="">
-                                <img src="./images/bread-box.png" alt="">
+                                <img src="./images/works/toDoList_1.png" alt="toDoリストのトップ画像">
+                                <img src="./images/works/toDoList_2.png" alt="toDoリストの画像２">
+                                <img src="./images/works/toDoList_3.png" alt="toDoリストの画像３">
+                                <img src="./images/works/toDoList_4.png" alt="toDoリストの画像４">
                             </div>
                         </div>
                     </div>
@@ -275,13 +289,14 @@
                             <li><i class="devicon-typescript-plain colored"></i>TypeScript<div class="rateit" data-rateit-value="3.5" data-rateit-ispreset="true" data-rateit-readonly="true"></div></li>
                             <li><i class="devicon-react-original colored"></i>React<div class="rateit" data-rateit-value="3.5" data-rateit-ispreset="true" data-rateit-readonly="true"></div></li>
                             <li><i class="devicon-jquery-plain colored"></i>jQuery<div class="rateit" data-rateit-value="3" data-rateit-ispreset="true" data-rateit-readonly="true"></div></li>
+                            <li><i class="devicon-bootstrap-plain colored"></i>Bootstrap<div class="rateit" data-rateit-value="2.5" data-rateit-ispreset="true" data-rateit-readonly="true"></div></li>
                         </ul>
                     </div>
                     <div class="swiper-slide">
                         <ul>
                             <li><i class="devicon-php-plain colored"></i>PHP<div class="rateit" data-rateit-value="2.5" data-rateit-ispreset="true" data-rateit-readonly="true"></div></li>
                             <li><i class="devicon-laravel-plain colored"></i>Laravel<div class="rateit" data-rateit-value="2.5" data-rateit-ispreset="true" data-rateit-readonly="true"></div></li>
-                            <li><i class="devicon-postgresql-plain colored"></i>postgreSQL<div class="rateit" data-rateit-value="2.5" data-rateit-ispreset="true" data-rateit-readonly="true"></div></li>
+                            <li><i class="devicon-postgresql-plain colored"></i>PostgreSQL<div class="rateit" data-rateit-value="2.5" data-rateit-ispreset="true" data-rateit-readonly="true"></div></li>
                             <li><i class="devicon-git-plain colored"></i>Git/GitHub<div class="rateit" data-rateit-value="3" data-rateit-ispreset="true" data-rateit-readonly="true"></div></li>
                         </ul>
                     </div>
@@ -310,8 +325,8 @@
         <h2>私について</h2>
         <p>
             独学でフロントエンドを中心に学習しています。
-            <br/>2020年7月より趣味の一環としてWEBやプログラミングを学び始め、
-            <br/>エンジニアになる決意をした12月頃より、本格的に学習に取り組んでいます。
+            <br/>2020年7月よりWEBやプログラミングを学び始め、
+            <br/>12月頃より、一層本格的に学習に励んでいます。
         </p>
         <div class="p-about__advantage">
             <div class="p-about__advantage__title">強み</div>
@@ -334,7 +349,7 @@
                 </li>
                 <li class="p-about__advantage__list__item">周りの状況を正確に捉え、<br/>チームや相手に必要なことを率先して行う<i class="fas fa-chevron-circle-right"></i>
                     <div class="p-about__advantage__list__item__detail">
-                        <p></p>
+                        <p>チームの状況や方針に応じて発生するタスクや、必要と考えられることに自ら手を上げ、率先して行い、やり遂げてきました。今後も組織やチームに貢献できるように努力してまいります。</p>
                     </div>
                 </li>
             </ul>
@@ -349,10 +364,10 @@
         </div>
     </section>
     
-    <aside class="l-side">
-        <a href="https://github.com/arisaokasaka"><i class="fab fa-github"></i><span>Github</span></a>
-        <a href="https://twitter.com/dev_design8"><i class="fab fa-twitter"></i><span>Twitter</span></a>
-        <a href="https://de-milestones.com/"><i class="fas fa-blog"></i><span>BLOG</span></a>
+    <aside class="l-side u-tooltip--side">
+        <a href="https://github.com/arisaokasaka" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i><span>Github</span></a>
+        <a href="https://twitter.com/dev_design8" target="_blank" rel="noopener noreferrer"><i class="fab fa-twitter"></i><span>Twitter</span></a>
+        <a href="https://de-milestones.com/" target="_blank" rel="noopener noreferrer"><i class="fas fa-blog"></i><span>BLOG</span></a>
     </aside>
 
     <footer class="l-footer">
